@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Generate Post</title>
+    <title>AI Post Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Generate Post</h2>
-    <input type="text" id="newpost" placeholder="Enter topic name" />
-    <button onclick="getPost()">Get Post</button>
+    <div class="container">
+        <h2>AI Post Generator</h2>
 
-    <p id="li-post"></p> <!-- Display the generated post here -->
+        <!-- Input & Button -->
+        <input type="text" id="newpost" placeholder="Enter topic name" />
+        <button onclick="getPost()">Generate Post</button>
+
+        <!-- Output -->
+        <p id="li-post"></p>
+    </div>
 
     <script>
         function getPost() {
