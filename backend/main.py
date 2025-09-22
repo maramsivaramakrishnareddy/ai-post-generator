@@ -1,11 +1,13 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-import requests
-import json
+import requests, json, os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env file
 
 app = FastAPI()
 
-# Enable CORS so frontend can access backend
+# Enable CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -35,7 +37,7 @@ async def generatePost(request: Request):
 
         headers = {
             "Content-Type": "application/json",
-            "Authorization": "Bearer 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"
+            "Authorization": f"Bearer {os.getenv('GROQ_API_KEY')}"  # Load from env
         }
 
         response = requests.post(url, headers=headers, json=payload)
@@ -53,7 +55,3 @@ async def generatePost(request: Request):
 
     except Exception as e:
         return {"error": "Server exception", "details": str(e)}
-
-@app.get("/")
-def read_root():
-    return {"message": "FastAPI server is running"}
