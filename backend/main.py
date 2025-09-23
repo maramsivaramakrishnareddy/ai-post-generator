@@ -6,6 +6,10 @@ from dotenv import load_dotenv
 load_dotenv()  # Load .env file
 
 app = FastAPI()
+@app.get("/")
+def root():
+    return {"message": "Backend is working!"}
+
 
 # Enable CORS
 app.add_middleware(
