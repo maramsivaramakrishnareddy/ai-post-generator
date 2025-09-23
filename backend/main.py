@@ -38,6 +38,7 @@ async def generatePost(request: Request):
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {os.getenv('GROQ_API_KEY')}"  # Load from env
+  # Load from env
         }
 
         response = requests.post(url, headers=headers, json=payload)

@@ -1,17 +1,16 @@
-# Python
+# Node / Python / IDE files
+*.log
+*.tmp
+.vscode/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 
-# Virtualenv
-venv/
-backend/.env
-
-# Editor
-.vscode/
-*.swp
-
-# OS
-.DS_Store
+# System files
 Thumbs.db
+Desktop.ini
+AppData/
+$RECYCLE.BIN/
+
+# Secrets
+.env
+*.key
