@@ -15,8 +15,7 @@ This is a simple AI post generator project.
 5. Run backend: `uvicorn main:app --reload --host 0.0.0.0 --port 8000`
 6. Open `frontend/index.html` in browser
 
-## Acknowledgement
-Built with help from ChatGPT and guidance from a mentor.
+
 
 ## Screenshots
 Add demo screenshots or GIFs in `assets/` folder
